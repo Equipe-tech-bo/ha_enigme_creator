@@ -1,0 +1,10 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Enigme Creator",
+        "description": "Cliquez sur Valider pour activer le service enigme_creator.create_enigme"
+      }
+    }
+  }
+}
