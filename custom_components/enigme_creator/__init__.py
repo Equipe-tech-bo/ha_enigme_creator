@@ -88,10 +88,9 @@ async def create_enigme_entities(hass: HomeAssistant, prefix: str, enigme_name: 
 # ══════════════════════════════════════════════════════════
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-
+    """Chargement sans config entry."""
     hass.data.setdefault(DOMAIN, {})
 
-    # ── Service appelable depuis HA ────────────────────────────────── #
     async def handle_create_enigme(call: ServiceCall):
         prefix      = call.data["prefix"]
         enigme_name = call.data["enigme_name"]
@@ -107,7 +106,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         })
     )
 
-    _LOGGER.info("[EnigmeCreator] Service 'enigme_creator.create_enigme' enregistré")
     return True
 
 
