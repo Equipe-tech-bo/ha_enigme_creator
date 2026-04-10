@@ -1,0 +1,20 @@
+create_enigme:
+  name: "Créer les entités d'une énigme"
+  description: >
+    Crée les 10 entités standard pour une énigme.
+    Les entités déjà existantes sont ignorées.
+  fields:
+    prefix:
+      name: "Préfixe"
+      description: "Préfixe court de l'énigme (ex: SM, SO, RdS, CaP)"
+      required: true
+      example: "SM"
+      selector:
+        text:
+    enigme_name:
+      name: "Nom complet"
+      description: "Nom complet de l'énigme (ex: Socle Magie)"
+      required: true
+      example: "Socle Magie"
+      selector:
+        text:
